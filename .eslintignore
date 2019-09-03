@@ -1,0 +1,4 @@
+pkg/
+docs/
+node_modules/
+src/**/*.test.js

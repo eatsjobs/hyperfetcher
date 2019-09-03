@@ -1,2 +1,7 @@
-# hyperfetcher
-a fetch wrapper with JWT support
+# Hyperfetcher
+a fetch wrapper with TokenGenerator support
+
+# Why?
+
+# How?
+
