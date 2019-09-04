@@ -1,11 +1,12 @@
 {
-  "name": "hyperfetcher",
+  "name": "@eatsjobs/hyperfetcher",
   "version": "1.0.0",
   "description": "another fetch wrapper",
   "main": "src/index.js",
   "scripts": {
     "prepare": "install-peers",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "build": "pika-pack build"
   },
   "repository": {
@@ -60,17 +61,21 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "install-peers-cli": "^2.1.1",
-    "jest": "^24.9.0"
-  },
-  "dependencies": {
+    "jest": "^24.9.0",
     "@babel/runtime": "^7.5.5",
     "@pika/pack": "^0.5.0"
   },
+  "dependencies": {},
   "engines": {
     "node": ">=10.16.3"
   },
   "files": [
     "pkg/*",
     "!/**/__tests__"
-  ]
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
 }
