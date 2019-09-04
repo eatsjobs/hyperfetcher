@@ -37,7 +37,8 @@
       ],
       [
         "@pika/plugin-build-web"
-      ]
+      ],
+      ["@pika/plugin-bundle-web", { "sourcemap": "true", "minify": "true" }]
     ]
   },
   "peerDependencies": {
@@ -51,8 +52,11 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.6.0",
     "@pika/plugin-build-web": "^0.6.0",
+    "@pika/plugin-bundle-web": "^0.6.0",
     "@pika/plugin-standard-pkg": "^0.6.0",
     "@pika/types": "^0.6.0",
     "babel-eslint": "^10.0.3",
@@ -61,9 +65,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "install-peers-cli": "^2.1.1",
-    "jest": "^24.9.0",
-    "@babel/runtime": "^7.5.5",
-    "@pika/pack": "^0.5.0"
+    "jest": "^24.9.0"
   },
   "dependencies": {},
   "engines": {
