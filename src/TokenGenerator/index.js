@@ -42,7 +42,7 @@ class TokenGenerator {
     }
 
     /**
-     * @description Check if the stored token is expired
+     * @description Check if the stored token has expired
      * @return {boolean}
      */
     isExpired() {

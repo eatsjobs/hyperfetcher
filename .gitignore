@@ -62,3 +62,6 @@ typings/
 
 # pika build folders
 pkg/*
+
+# docs
+docs/*

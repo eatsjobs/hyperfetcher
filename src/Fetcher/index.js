@@ -1,4 +1,3 @@
-/* global fetch */
 import { isAbsoluteUrl, parseResponse, compose } from '../utils/index';
 
 /**

@@ -4,10 +4,16 @@
   "description": "another fetch wrapper",
   "main": "src/index.js",
   "scripts": {
+    "doc": "rimraf ./docs/${npm_package_version} && jsdoc -c .jsdoc.json -d ./docs/${npm_package_version}/",
+    "doc:latest": "rimraf ./docs/latest && jsdoc -c .jsdoc.json -d ./docs/latest/",
+    "doc:open": "npm run doc && http-server docs/${npm_package_version} -p 8888",
     "prepare": "install-peers",
+    "test:watch": "jest --watch",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "build": "pika-pack build"
+    "build": "pika build",
+    "version": "npm run build",
+    "publish": "pika publish"
   },
   "repository": {
     "type": "git",
@@ -38,7 +44,13 @@
       [
         "@pika/plugin-build-web"
       ],
-      ["@pika/plugin-bundle-web", { "sourcemap": "true", "minify": "true" }]
+      [
+        "@pika/plugin-bundle-web",
+        {
+          "sourcemap": "true",
+          "minify": "true"
+        }
+      ]
     ]
   },
   "peerDependencies": {
@@ -53,6 +65,7 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.5.5",
+    "@pika/cli": "^0.2.0",
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.6.0",
     "@pika/plugin-build-web": "^0.6.0",
@@ -64,8 +77,12 @@
     "eslint": "^6.3.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "http-server": "^0.11.1",
     "install-peers-cli": "^2.1.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3",
+    "minami": "^1.2.3",
+    "rimraf": "^3.0.0"
   },
   "dependencies": {},
   "engines": {
@@ -79,5 +96,6 @@
     "browser": true,
     "node": true,
     "jest": true
-  }
+  },
+  "browserslist": ">0.75%, not ie 11, not op_mini all"
 }
