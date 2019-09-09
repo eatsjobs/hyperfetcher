@@ -1,6 +1,6 @@
 {
   "name": "@eatsjobs/hyperfetcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "another fetch wrapper",
   "main": "src/index.js",
   "scripts": {
