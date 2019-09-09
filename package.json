@@ -11,7 +11,8 @@
     "test:watch": "jest --watch",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "build": "pika build"
+    "build": "pika build",
+    "version": "npm run build"
   },
   "repository": {
     "type": "git",
